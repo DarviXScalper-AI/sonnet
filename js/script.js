@@ -150,7 +150,7 @@
   }
 
   document.addEventListener('keydown', function (e) {
-    if (lightbox.hidden) return;
+    if (!lightbox || lightbox.hidden) return;
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') openLightbox(currentIndex - 1);
     if (e.key === 'ArrowRight') openLightbox(currentIndex + 1);
